@@ -1,13 +1,16 @@
+import BigNumber from 'bignumber.js'
 import React, { useState } from 'react';
-import {bnToDec, decToBn} from './constant/util';
+
 import Details from './component/details-flex-box'
 import Review from './component/review-flex-box'
 import Send from './component/send-flex-box'
-import Header from './container/header/index'
-import {web3} from './constant/web3'
 import config from './config';
-import BigNumber from 'bignumber.js'
+import { bnToDec, decToBn } from './constant/util';
+import { web3 } from './constant/web3'
+import Header from './container/header/index'
+
 import './App.css';
+
 const WeenusTokenContract = require('./constant/contract')
 
 function App() {
