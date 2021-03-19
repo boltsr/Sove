@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
 import BigNumber from 'bignumber.js'
-import eth from '../asset/eth.png'
-import eth1 from '../asset/eth1.png'
+import React, { useEffect, useState } from 'react';
+
+import eth from '../asset/eth.svg'
+import weenus from '../asset/weenus.svg'
 
 interface SendProps {
     ClickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void,
@@ -30,8 +31,8 @@ function Send( Props: SendProps) {
     // })
 
   return (
-      <div>
-        <div className="flex mt-xsm text-center">
+      <div >
+        <div className="flex mt-xsm text-center justify-center">
             <p className="text-center font-display font-extrabold text-primary text-8xl">SEND</p>
         </div>
         <div className="mt-sm flex flex-col items-center w-5/7 items-center ">
@@ -41,15 +42,15 @@ function Send( Props: SendProps) {
             {Props.isConnected ? (
                 <div className = "flex flex-row w-5/7 mt-xsm">
                     {/* <div className="mt-1 relative rounded-md shadow-sm"> */}
-                    <button className={`focus:outline-none rounded-md border border-radio bg-radio rounded-r-none text-primary font-extrabold text-10xl w-4/7 h-xlg ${!Props.eth?'bg-opacity-50':'bg-opacity-25'}`} onClick={Props.TypeClickHandler.bind(Send)}>rETH</button>
-                    <button className={`focus:outline-none rounded-md border border-radio bg-radio rounded-l-none text-primary font-extrabold text-10xl w-4/7 h-xlg ${Props.eth?'bg-opacity-50':'bg-opacity-25'}`} onClick={Props.TypeClickHandler.bind(Send)}>WEENUS</button>
+                    <button className={`focus:outline-none flex flex-row rounded-md border border-radio bg-radio rounded-r-none text-primary font-extrabold text-10xl w-4/7 h-xlg justify-center items-center ${!Props.eth?'bg-opacity-50':'bg-opacity-25'}`} onClick={Props.TypeClickHandler.bind(Send)}><img className="mr-tsm" src={eth}/> rETH</button>
+                    <button className={`focus:outline-none flex flex-row rounded-md border border-radio bg-radio rounded-l-none text-primary font-extrabold text-10xl w-4/7 h-xlg justify-center items-center ${Props.eth?'bg-opacity-50':'bg-opacity-25'}`} onClick={Props.TypeClickHandler.bind(Send)}><img className="mr-tsm" src={weenus}/> WEENUS</button>
                     {/* </div> */}
                 </div>
             ):(
                 <div className = "flex flex-row w-5/7 mt-xsm">
                     {/* <div className="mt-1 relative rounded-md shadow-sm"> */}
-                    <button disabled className={`focus:outline-none rounded-md border border-radio bg-radio rounded-r-none text-primary font-extrabold text-10xl w-4/7 h-xlg ${!Props.eth?'bg-opacity-50':'bg-opacity-25'}`} >rETH</button>
-                    <button disabled className={`focus:outline-none rounded-md border border-radio bg-radio rounded-l-none text-primary font-extrabold text-10xl w-4/7 h-xlg ${Props.eth?'bg-opacity-50':'bg-opacity-25'}`} >WEENUS</button>
+                    <button disabled className={`focus:outline-none flex flex-row rounded-md border border-radio bg-radio rounded-r-none text-primary font-extrabold text-10xl w-4/7 h-xlg justify-center items-center ${!Props.eth?'bg-opacity-50':'bg-opacity-25'}`}><img className="mr-tsm" src={eth}/> rETH</button>
+                    <button disabled className={`focus:outline-none flex flex-row rounded-md border border-radio bg-radio rounded-l-none text-primary font-extrabold text-10xl w-4/7 h-xlg justify-center items-center ${Props.eth?'bg-opacity-50':'bg-opacity-25'}`}><img className="mr-tsm" src={weenus}/> WEENUS</button>
                     {/* </div> */}
                 </div>                    
             )}

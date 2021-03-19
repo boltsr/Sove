@@ -1,5 +1,7 @@
 import React from 'react';
+
 import check from '../asset/check.png'
+
 interface DetailsProps {
     txHash: string,
     CloseClickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void,
@@ -7,13 +9,13 @@ interface DetailsProps {
 function Details(Props:DetailsProps) {
   return (
     <div>
-        <div className="flex mt-sm text-center">
+        <div className="flex mt-sm text-center justify-center">
             <p className="text-center font-display font-semibold text-primary text-6xl">Trasaction Details</p>
         </div>
         <div className="flex mt-sm justify-center">
             <img src={check}/>
         </div>
-        <div className="flex mt-xsm text-center">
+        <div className="flex mt-xsm text-center justify-center">
             <p className="text-center font-display font-light text-status text-9xl italic">Status Pending</p>
         </div>
 

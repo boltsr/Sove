@@ -115,6 +115,7 @@ const onPercentClickHandler = (event: any) => {
   const onConnectWallet = async () => {
     try {
       const netId =  `${await web3.eth.net.getId()}`;
+      console.log(netId)
       if (netId !== config.networkId) {
         alert('Please select ropsten net to proceed!');
         setConnect(false)

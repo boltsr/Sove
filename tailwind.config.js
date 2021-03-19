@@ -57,6 +57,7 @@ module.exports = {
        'status': '#d9d9d9'
      },
      margin: {
+      tsm: '5px',
       xsm: '10px',
       sm: '30px',
       md: '35px',
